@@ -6,10 +6,17 @@ require("dotenv").config();
 
 const app = express();
 
+const cors = require("cors");
+
 app.use(cors({
-  origin: "https://classroom-schedular.vercel.app",
+  origin: [
+    "https://classroom-schedular.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
+app.options("*", cors()); // 🔥 VERY IMPORTANT
 app.use(express.json());
 
 
