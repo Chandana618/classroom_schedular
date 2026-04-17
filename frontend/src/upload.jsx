@@ -17,7 +17,7 @@ export default function Upload() {
 
     try{
     setLoading(true);
-    await axios.post("http://localhost:5000/api/upload", formData);
+    await axios.post("https://your-backend.onrender.com/api/auth/login", formData);
     setLoading(true);
 
      setTimeout(() => {
