@@ -39,4 +39,4 @@ app.get("/seed-data", async (req, res) => {
   res.send("Sample data added ✅");
 });
 
-app.use("/api/upload", require("./routes/upload"));
+// app.use("/api/upload", require("./routes/upload"));

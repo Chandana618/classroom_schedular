@@ -24,7 +24,7 @@ export default function Timetable() {
   }, []);
 
   const fetchData = async () => {
-    const res = await axios.get("https://your-backend.onrender.com/api/timetable");
+    const res = await axios.get("https://classroom-schedular.onrender.com/api/timetable");
     setData(res.data);
   };
 
@@ -37,7 +37,7 @@ export default function Timetable() {
     // 🔴 CASE 1: NONE → DELETE
     if (!selectedCell.cell.department) {
       await await axios.delete(
-  `https://your-backend.onrender.com/api/timetable/delete?day=${selectedCell.day}&slot=${selectedCell.slot}`
+  `https://classroom-schedular.onrender.com/api/timetable/delete?day=${selectedCell.day}&slot=${selectedCell.slot}`
 );
 
       setSelectedCell(null);
@@ -46,7 +46,7 @@ export default function Timetable() {
     }
 
     // 🟢 CASE 2: CREATE / UPDATE
-    await axios.put("https://your-backend.onrender.com/api/timetable/update", {
+    await axios.put("https://classroom-schedular.onrender.com/api/timetable/update", {
       day: selectedCell.day,
       slot: selectedCell.slot,
       department: selectedCell.cell.department,
