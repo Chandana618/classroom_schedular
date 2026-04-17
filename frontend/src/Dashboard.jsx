@@ -20,7 +20,7 @@ export default function Dashboard() {
     formData.append("file", file);
 
     try {
-      await axios.post("https://classroom-schedular.onrender.com/api/upload", formData);
+      await axios.post("https://classroom-schedular-1.onrender.com/api/upload", formData);
 
       alert("Upload successful ✅");
 
