@@ -10,7 +10,7 @@ const cors = require("cors");
 
 app.use(cors({
   origin: [
-    "https://classroom-schedular-1.vercel.app"
+    "https://classroom-schedular.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
