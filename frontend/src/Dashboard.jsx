@@ -20,7 +20,7 @@ export default function Dashboard() {
     formData.append("file", file);
 
     try {
-      await axios.post("http://localhost:5000/api/upload", formData);
+      await axios.post("https://your-backend.onrender.com/api/upload", formData);
 
       alert("Upload successful ✅");
 
